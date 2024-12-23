@@ -6,6 +6,7 @@ import questions from "./questions.js";
 import Prediction from "./Prediction";
 import Predict from "./predict";
 import { DNA } from "react-loader-spinner";
+import confetti from "canvas-confetti";
 
 function Center() {
   // for the speech thingy before the questions
@@ -56,6 +57,16 @@ function Center() {
     }
     return value;
   }
+
+  const triggerParty = () => {
+    confetti({
+      particleCount: 200,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ["#ff0000", "#ffff00", "#00ff00", "#0000ff"],
+      gravity: 1.5,
+    });
+  };
 
   const required_params = [
     "sex", // Gender (Question 1)
@@ -265,6 +276,7 @@ function Center() {
             Again ?
           </button>
         )}
+        {again && triggerParty()}
       </div>
     </div>
   );
