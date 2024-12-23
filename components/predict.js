@@ -1,8 +1,11 @@
 import axios from "axios";
 
+const baseUrl =
+  process.env.NEXT_PUBLIC_API || "https://monkeyscorebackend.onrender.com";
+
 export default async function Predict(final) {
   return await axios
-    .post(`${process.env.NEXT_PUBLIC_API}/predict`, final, {
+    .post(`${baseUrl}/predict`, final, {
       headers: {
         "Content-Type": "application/json",
       },
