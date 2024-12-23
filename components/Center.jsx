@@ -122,15 +122,17 @@ function Center() {
     <div className="w-[98%] border-slate-400 border-[2px] rounded-lg min-h-[80vh] bg-blue-200 border-solid">
       <div className="w-full px-[5%] flex flex-col sm:flex-row  justify-between items-center pt-10">
         <div className=" w-[40%] h-[400px] flex items-center justify-center bg-blue-500 rounded-lg">
-          {ready < 3 ? (
+          {ready < 3 || again ? (
             <video src="/monkey.webm" autoPlay loop muted></video>
           ) : (
-            <div className="flex flex-col">
-              <p className="text-center text-2xl">
-                {ques <= 24 ? "Processing..." : "Predicting..."}{" "}
-              </p>
-              <video src="/processing.webm" autoPlay loop muted></video>
-            </div>
+            !again && (
+              <div className="flex flex-col">
+                <p className="text-center text-2xl">
+                  {ques <= 24 ? "Processing..." : "Predicting..."}
+                </p>
+                <video src="/processing.webm" autoPlay loop muted></video>
+              </div>
+            )
           )}
         </div>
         <div className=" w-[40%] h-[400px] relative bg-blue-500 rounded-lg">
