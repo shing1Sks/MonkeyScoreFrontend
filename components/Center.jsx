@@ -118,10 +118,10 @@ function Center() {
       [required_params[ques]]: option,
     }));
 
-    console.log("Updated Final:", {
-      ...final,
-      [required_params[ques]]: option,
-    });
+    // console.log("Updated Final:", {
+    //   ...final,
+    //   [required_params[ques]]: option,
+    // });
   };
 
   let speech = [
@@ -130,9 +130,9 @@ function Center() {
     "Simply answer a few questions, and I will unveil your predicted score. Let’s begin the journey!",
   ];
   return (
-    <div className="w-[98%] border-slate-400 border-[2px] rounded-lg min-h-[80vh] bg-blue-200 border-solid">
+    <div className="w-[98%] border-slate-400 border-[2px] rounded-lg py-[2%] bg-blue-200 border-solid">
       <div className="w-full px-[5%] flex flex-col sm:flex-row  justify-between items-center pt-10">
-        <div className=" w-[40%] h-[400px] flex items-center justify-center bg-blue-500 rounded-lg">
+        <div className="w-full sm:w-[40%] h-[200px] sm:h-[400px] flex items-center justify-center bg-blue-500 rounded-lg">
           {ready < 3 || again ? (
             <video src="/monkey.webm" autoPlay loop muted></video>
           ) : (
@@ -146,10 +146,10 @@ function Center() {
             )
           )}
         </div>
-        <div className=" w-[40%] h-[400px] relative bg-blue-500 rounded-lg">
+        <div className="w-full mt-5 sm:mt-0 sm:w-[40%] h-[300px] sm:h-[400px] relative bg-blue-500 rounded-lg">
           {ready <= 2 ? (
             <div className="flex items-center justify-center">
-              <span className="font-semibold text-xl text-blue-100 p-[50px]">
+              <span className="font-semibold text-sm p-10 sm:text-xl text-blue-100 sm:p-[50px]">
                 <Typewriter
                   key={ready}
                   words={[speech[ready]]}
@@ -267,7 +267,7 @@ function Center() {
           )}
         </div>
       </div>
-      <div className="w-full flex items-center justify-center mt-10">
+      <div className="w-full flex items-center justify-center mt-10 py-3 sm:py-0">
         {again && (
           <button
             className="bg-blue-900 hover:bg-blue-600 active:bg-blue-300 px-10 py-1 rounded-md"

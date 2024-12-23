@@ -15,9 +15,9 @@ function Question({ question, choice, value, setNext }) {
   }, [question]);
 
   return (
-    <div className="pt-6 text-lg text-white bg-blue-300 rounded-lg h-[300px] w-[90%] relative flex flex-col justify-between p-2">
-      <p className="text-xl pb-2">{question.question}</p>
-      <div className="flex flex-col gap-4">
+    <div className="pt-6 text-sm sm:text-lg text-white bg-blue-300 rounded-lg h-[240px] sm:h-[300px] w-[90%] relative flex flex-col justify-between p-2">
+      <p className="text-lg sm:text-xl pb-2">{question.question}</p>
+      <div className="flex flex-col gap-1 sm:gap-4">
         {options.length > 0 ? (
           options.map((option, index) => (
             <div key={index} className="flex items-center">

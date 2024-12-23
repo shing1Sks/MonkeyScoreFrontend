@@ -8,10 +8,10 @@ import Title from "@/components/Title";
 export default function Home() {
   return (
     <div className="w-full bg-blue-400 min-h-screen">
-      <div className="w-full flex items-center justify-center pb-10">
+      <div className="w-full flex items-center justify-center pb-4 sm:pb-10">
         <Header />
       </div>
-      <div className="w-full flex items-center justify-center pb-10">
+      <div className="w-full flex items-center justify-center pb-4 sm:pb-10">
         <Title />
       </div>
       <div className="w-full flex items-center justify-center pb-10">
