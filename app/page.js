@@ -3,6 +3,7 @@
 import About from "@/components/About";
 import Center from "@/components/Center";
 import Header from "@/components/Header";
+import Help from "@/components/Help";
 import Title from "@/components/Title";
 
 export default function Home() {
@@ -19,6 +20,9 @@ export default function Home() {
       </div>
       <div className="w-full flex items-center justify-center pb-10">
         <About />
+      </div>
+      <div className="w-full flex items-center justify-center pb-10">
+        <Help />
       </div>
     </div>
   );
