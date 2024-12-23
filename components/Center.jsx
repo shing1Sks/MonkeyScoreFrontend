@@ -41,7 +41,7 @@ function Center() {
 
   // Prediction function
   const getPrediction = async () => {
-    console.log("Final data for prediction:", final);
+    // console.log("Final data for prediction:", final);
     setLoading(true);
     setPredict(await Predict(final));
     setLoading(false);
