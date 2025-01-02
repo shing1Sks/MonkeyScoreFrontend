@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const baseUrl =
-  process.env.NEXT_PUBLIC_API || "https://monkeyscorebackend.onrender.com";
+  process.env.NEXT_PUBLIC_API || "https://monkeyscoresecback.onrender.com";
 
 export default async function Predict(final) {
   return await axios
